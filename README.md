@@ -12,13 +12,13 @@ We then, again with random seeds 42, start sampling $15$ of these tags for every
 In order to run the simulation, it is enough to just sample the next tag from $\text{clueids}_{i, k}$. 
 ## Prompts used
 1) Prompt descriptions: likelihood collection for experiment $j$  
-   **Header**:  Presume that any of the three movies is initially equally likely. Then a single tag is given, related to the correct movie. Return ONLY three space-separated decimal numbers. NO explanations, NO formatting.
-   **Content**: Given the tag: \"{clue}\", what is your belief over the three classes $s_j$? Return ONLY EXACTLY three space-separated decimal numbers. NO explanations, NO text, NO formatting.
-2) Prompt descriptions: Self-learning for experiment $j$ at time $i$ and agent $k$
-   **Header**: You are participating in a movie guessing game with three possible movies.  Your previous belief is given; as well as a clue related to the correct movie. Your task is to output your new belief probabilites. Return ONLY three space-separated decimal numbers. NO explanations, NO text, NO formatting.
-   **Content**: New clue: \"clue\". Your own belief from the previous round over $s_i$ was: $\mu_{k, i-1}$.  Based on the new clue and your previous belief, what is your belief over the classes $s_j$? Return ONLY EXACTLY three space-separated decimal numbers. NO explanations, NO text, NO formatting  
-3) Prompt descriptions: Combination step  
+   **Header**:  Presume that any of the three movies is initially equally likely. Then a single tag is given, related to the correct movie. Return ONLY three space-separated decimal numbers. NO explanations, NO formatting.  
+   **Content**: Given the tag: \"{clue}\", what is your belief over the three classes $s_j$? Return ONLY EXACTLY three space-separated decimal numbers. NO explanations, NO text, NO formatting.  
+2) Prompt descriptions: Self-learning for experiment $j$ at time $i$ and agent $k$  
+   **Header**: You are participating in a movie guessing game with three possible movies.  Your previous belief is given; as well as a clue related to the correct movie. Your task is to output your new belief probabilites. Return ONLY three space-separated decimal numbers. NO explanations, NO text, NO formatting.  
+   **Content**: New clue: \"clue\". Your own belief from the previous round over $s_i$ was: $\mu_{k, i-1}$.  Based on the new clue and your previous belief, what is your belief over the classes $s_j$? Return ONLY EXACTLY three space-separated decimal numbers. NO explanations, NO text, NO formatting   
+3) Prompt descriptions: Combination step   
    **Header**: You are participating in a movie guessing game with three possible movies. Your previous belief and your neighbors' beliefs are given. Your neighbors have seen different clues than you. Your task is to output your new belief probabilites. Return ONLY three space-separated decimal numbers. NO explanations, NO text, NO formatting.  
    **Content**: Your own belief from the previous round over $s_j$ was: $\psi_{k, i}$. Your neighbors' beliefs for $s_j$ are  
-   *Here output all neighbors in the form:* Neighbor $m$: $\psi_{m, i}$  
-   Based on the provided information, what is your current probability belief over $s_j$? Return ONLY EXACTLY three space-separated decimal numbers. NO explanations, NO text, NO formatting.
+   *Here output all neighbors in the form:* Neighbor $m$: $\psi_{m, i}$   
+   Based on the provided information, what is your current probability belief over $s_j$? Return ONLY EXACTLY three space-separated decimal numbers. NO explanations, NO text, NO formatting.  
