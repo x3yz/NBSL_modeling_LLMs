@@ -1,7 +1,7 @@
 # NBSL for Modeling Interacting LLMs
-$s_1:=$\"\[Pulp Fiction, Forrest Gump, Jurrasic Park\]\"  
-$s_2:=$\"[Pulp Fiction, Forrest Gump, Fight Club\]\"
-$\theta^*=1*
+$s_1:=$\"\[Pulp Fiction, Forrest Gump, Jurrasic Park\]\"   
+$s_2:=$\"[Pulp Fiction, Forrest Gump, Fight Club\]\"  
+$\theta^\*=1*
 ## Download and run data
 For Experiment 1 extract [ml-20m](https://grouplens.org/datasets/movielens/20m/) to \"Experiment1/data/\" ; for Experiment 2 extract [ml-32m](https://grouplens.org/datasets/movielens/32m/) to \"Experiment2/data/\"
 ## Experiment description
